@@ -3,11 +3,9 @@ import styled from "styled-components";
 import classNames from "classnames";
 import PlainView from "./Plain";
 
-const bg = color => color ? `bg-${color}` : "";
-
 const View = styled(PlainView).attrs({
-  className: ({ skin, ...props }) => classNames(
-    bg(skin),
+  className: ({ theme, ...props }) => classNames(
+
   ),
 })``;
 

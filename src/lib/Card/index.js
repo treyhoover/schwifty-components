@@ -3,14 +3,11 @@ import styled from "styled-components";
 import classNames from "classnames";
 import PlainCard from "./Plain";
 
-const bg = color => color ? `bg-${color}` : "";
-
 const Card = styled(PlainCard).attrs({
-  className: ({ skin, ...props }) => classNames(
+  className: ({ ...props }) => classNames(
     "dib",
     "tc",
     "ba b--black-20",
-    bg(skin),
   ),
 })``;
 
