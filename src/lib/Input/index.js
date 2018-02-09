@@ -8,15 +8,21 @@ const Input = styled(PlainInput).attrs({
     'input-reset',
     'db di-ns',
     'w-100 w-auto-ns',
-    'bg-white',
-    'ba b--gray br2',
+    'br2',
     'ph2 pv1',
     theme.Input.sizes[size],
+    theme.Input.skins[skin],
   ),
-})``;
+})`
+  &::placeholder {
+    color: ${({ skin }) => skin === "white" ? "black" : "white"};
+    opacity: 0.5;
+  }
+`;
 
 Input.defaultProps = {
   size: "md",
+  skin: "white",
 };
 
 export default Input;

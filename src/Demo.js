@@ -34,6 +34,15 @@ class App extends React.Component {
             <Input size="lg" mb2 placeholder="Large" />
           </Group>
 
+          <Group flex flex-wrap items-end>
+            <Input skin="red" mr2-ns mb2 placeholder="Red" />
+            <Input skin="orange" mr2-ns mb2 placeholder="Orange" />
+            <Input skin="yellow" mr2-ns mb2 placeholder="Yellow" />
+            <Input skin="green" mr2-ns mb2 placeholder="Green" />
+            <Input skin="blue" mr2-ns mb2 placeholder="Blue" />
+            <Input skin="black" mr2-ns mb2 placeholder="Black" />
+          </Group>
+
           <Text as="h2">Cards</Text>
 
           <Group flex>
