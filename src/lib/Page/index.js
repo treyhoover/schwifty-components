@@ -1,4 +1,5 @@
 import React from "react";
+import withTachyons from "../../hoc/withTachyons";
 
 class Page extends React.Component {
   componentDidMount() {
@@ -35,4 +36,4 @@ Page.defaultProps = {
   bodyClass: "",
 };
 
-export default Page;
+export default withTachyons(Page);

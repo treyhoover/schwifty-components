@@ -1,14 +1,17 @@
-import 'tachyons/css/tachyons.min.css';
+import React from "react";
 import styled from "styled-components";
 // import classNames from "classnames";
-import Element from "../Element";
+import withTachyons from "../../hoc/withTachyons";
+import 'tachyons/css/tachyons.min.css';
 
-const Image = styled(Element).attrs({
-  // className: ({ ...props }) => classNames(),
-})``;
+const Image = styled(({ as, children, skin, size, ...props }) => React
+  .createElement(as, props, children))
+  .attrs({
+    // className: ({ skin, size, theme, ...props }) => classNames()
+  })``;
 
 Image.defaultProps = {
   as: "img",
 };
 
-export default Image;
+export default withTachyons(Image);
