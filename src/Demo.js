@@ -12,13 +12,13 @@ class App extends React.Component {
             <Text as="h1" f1>Schwifty Components!</Text>
 
             <Text as="h2">Buttons</Text>
-            <Button.Group mv2 flex items-end>
+            <Group mv2 flex items-end>
               <Button size="sm" mr2-ns>Small</Button>
               <Button size="md" mr2-ns>Medium</Button>
               <Button size="lg">Large</Button>
-            </Button.Group>
+            </Group>
 
-            <Button.Group mv2 flex items-end>
+            <Group mv2 flex items-end>
               <Button skin="gray" mr2-ns>Default</Button>
               <Button skin="red" mr2-ns>Red</Button>
               <Button skin="orange" mr2-ns>Orange</Button>
@@ -26,7 +26,7 @@ class App extends React.Component {
               <Button skin="green" mr2-ns>Green</Button>
               <Button skin="blue" mr2-ns>Blue</Button>
               <Button skin="black" mr2-ns>Black</Button>
-            </Button.Group>
+            </Group>
 
             <Text as="h2">Inputs</Text>
             <Group flex flex-wrap items-end>

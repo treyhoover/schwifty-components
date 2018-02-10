@@ -2,7 +2,6 @@ import 'tachyons/css/tachyons.min.css';
 import styled from "styled-components";
 import classNames from "classnames";
 import Element from "../Element";
-import ButtonGroup from "./ButtonGroup";
 
 const Button = styled(Element).attrs({
   className: ({ skin, size, theme, ...props }) => classNames(
@@ -21,7 +20,5 @@ Button.defaultProps = {
   skin: "gray",
   size: "md",
 };
-
-Button.Group = ButtonGroup;
 
 export default Button;
