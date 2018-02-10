@@ -1,12 +1,12 @@
 import React from "react";
 import withTachyons from "../../hoc/withTachyons";
 
-const View = ({ as: T, ...props }) => (
+const Element = ({ as: T, ...props }) => (
   <T {...props} />
 );
 
-View.defaultProps = {
+Element.defaultProps = {
   as: "div",
 };
 
-export default withTachyons(View);
+export default withTachyons(Element);

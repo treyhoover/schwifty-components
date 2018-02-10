@@ -1,9 +1,9 @@
 import 'tachyons/css/tachyons.min.css';
 import styled from "styled-components";
 import classNames from "classnames";
-import PlainCard from "./Plain";
+import Element from "../Element";
 
-const Card = styled(PlainCard).attrs({
+const Card = styled(Element).attrs({
   className: ({ ...props }) => classNames(
     "dib",
     "tc",
@@ -12,7 +12,7 @@ const Card = styled(PlainCard).attrs({
 })``;
 
 Card.defaultProps = {
-
+  as: "div",
 };
 
 export default Card;

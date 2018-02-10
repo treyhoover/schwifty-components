@@ -1,9 +1,9 @@
 import 'tachyons/css/tachyons.min.css';
 import styled from "styled-components";
 import classNames from "classnames";
-import PlainInput from "./Plain";
+import Element from "../Element";
 
-const Input = styled(PlainInput).attrs({
+const Input = styled(Element).attrs({
   className: ({ skin, size, theme, ...props }) => classNames(
     'input-reset',
     'db di-ns',
@@ -21,6 +21,7 @@ const Input = styled(PlainInput).attrs({
 `;
 
 Input.defaultProps = {
+  as: "input",
   size: "md",
   skin: "white",
 };

@@ -1,14 +1,14 @@
 import 'tachyons/css/tachyons.min.css';
 import styled from "styled-components";
 // import classNames from "classnames";
-import PlainText from "./Plain";
+import Element from "../Element";
 
-const Text = styled(PlainText).attrs({
+const Text = styled(Element).attrs({
   // className: ({ ...props }) => classNames(),
 })``;
 
 Text.defaultProps = {
-
+  as: "span",
 };
 
 export default Text;
