@@ -17,6 +17,23 @@ class App extends React.Component {
             <Button size="lg">Large</Button>
           </Group>
 
+          <Group>
+            <Button
+              skin="blue"
+              as="a"
+              href="http://www.google.com"
+              no-underline
+              dib
+              mb2
+            >
+              Link
+            </Button>
+
+            <Button db w-100 skin="red">
+              Block
+            </Button>
+          </Group>
+
           <Group mv2 flex items-end>
             <Button skin="gray" mr2-ns>Default</Button>
             <Button skin="red" mr2-ns>Red</Button>
@@ -25,6 +42,16 @@ class App extends React.Component {
             <Button skin="green" mr2-ns>Green</Button>
             <Button skin="blue" mr2-ns>Blue</Button>
             <Button skin="black" mr2-ns>Black</Button>
+          </Group>
+
+          <Group mv2 flex items-end>
+            <Button inverted skin="gray" mr2-ns>Inverted Default</Button>
+            <Button inverted skin="red" mr2-ns>Inverted Red</Button>
+            <Button inverted skin="orange" mr2-ns>Inverted Orange</Button>
+            <Button inverted skin="yellow" mr2-ns>Inverted Yellow</Button>
+            <Button inverted skin="green" mr2-ns>Inverted Green</Button>
+            <Button inverted skin="blue" mr2-ns>Inverted Blue</Button>
+            <Button inverted skin="black" mr2-ns>Inverted Black</Button>
           </Group>
 
           <Text as="h2">Inputs</Text>
