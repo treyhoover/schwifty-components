@@ -1,7 +1,15 @@
+.bg-washed-orange {
+    background-color: #FEE8C2;
+}
+
 .hover-bg-dark-orange:hover {
     background-color: #da4d00;
 }
 
 .hover-bg-dark-yellow:hover {
     background-color: #e6bf00;
+}
+
+.dark-yellow {
+    color: #cca700;
 }

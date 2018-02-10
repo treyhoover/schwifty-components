@@ -36,6 +36,7 @@ class App extends React.Component {
             </Group>
 
             <Group flex flex-wrap items-end>
+              <Input skin="gray" mr2-ns mb2 placeholder="Gray" />
               <Input skin="red" mr2-ns mb2 placeholder="Red" />
               <Input skin="orange" mr2-ns mb2 placeholder="Orange" />
               <Input skin="yellow" mr2-ns mb2 placeholder="Yellow" />

@@ -17,14 +17,14 @@ export const Button = {
 
 export const Input = {
   skins: {
-    gray: "bg-gray white ba b--gray",
-    red: "bg-red white ba b--red",
-    orange: "bg-orange white ba b--orange",
-    yellow: "bg-yellow white ba b--yellow",
-    green: "bg-green white ba b--green",
-    blue: "bg-blue white ba b--blue",
-    black: "bg-black white ba b--black",
-    white: "bg-white black ba b--gray",
+    gray: "bg-near-white black ba b--gray",
+    red: "bg-washed-red red ba b--red",
+    orange: "bg-washed-orange orange ba b--orange",
+    yellow: "bg-washed-yellow gold ba b--yellow",
+    green: "bg-washed-green green ba b--green",
+    blue: "bg-washed-blue blue ba b--blue",
+    black: "bg-washed-black black ba b--black",
+    white: "bg-washed-white black ba b--gray",
   },
   sizes: {
     sm: "f7",
