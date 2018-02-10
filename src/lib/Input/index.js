@@ -15,7 +15,7 @@ const Input = styled(Element).attrs({
   ),
 })`
   &::placeholder {
-    color: ${({ skin }) => skin === "white" ? "black" : "white"};
+    color: currentColor;
     opacity: 0.5;
   }
 `;
