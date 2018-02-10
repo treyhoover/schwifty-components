@@ -5,3 +5,4 @@ export { default as Image } from "./Image";
 export { default as Input } from "./Input";
 export { default as Card } from "./Card";
 export { default as Group } from "./Group";
+export { default as Page } from "./Page";
