@@ -46,9 +46,4 @@ export default {
     secondary: black,
     white,
   },
-  sizes: {
-    sm: "f7",
-    md: "f6",
-    lg: "f4",
-  },
 };

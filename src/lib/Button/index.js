@@ -7,17 +7,16 @@ import 'tachyons/css/tachyons.min.css';
 
 const color = createColorizer("Button");
 
-const Button = styled(({ as, children, skin, size, inverted, circular, ghost, ...props }) => React
+const Button = styled(({ as, children, skin, inverted, circular, ghost, ...props }) => React
   .createElement(as, props, children))
   .attrs({
-    className: ({ skin, size, theme, circular, ...props }) => classNames(
+    className: ({ skin, theme, circular, ...props }) => classNames(
       circular ? 'pa2 truncate br-100' : 'ph3 pv2 br2',
       'pointer',
       'nowrap',
       'tc',
       'ba',
       'bg-animate',
-      theme.Button.sizes[size],
     ),
   })`
     ${({ circular }) => circular ? `
@@ -54,7 +53,6 @@ const Button = styled(({ as, children, skin, size, inverted, circular, ghost, ..
 Button.defaultProps = {
   as: "button",
   skin: "gray",
-  size: "md",
   inverted: false,
   circular: false,
   ghost: false,

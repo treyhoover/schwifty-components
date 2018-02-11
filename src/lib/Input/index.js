@@ -7,16 +7,13 @@ import 'tachyons/css/tachyons.min.css';
 
 const color = createColorizer("Input");
 
-const Input = styled(({ as, children, skin, size, ...props }) => React
+const Input = styled(({ as, children, skin, ...props }) => React
   .createElement(as, props, children))
   .attrs({
-    className: ({ skin, size, theme, ...props }) => classNames(
+    className: ({ skin, theme, ...props }) => classNames(
     'input-reset',
-    'db di-ns',
-    'w-100 w-auto-ns',
     'ba br2',
     'ph2 pv1',
-    theme.Input.sizes[size],
   ),
 })`
   background-color: ${color(0)};
@@ -31,7 +28,6 @@ const Input = styled(({ as, children, skin, size, ...props }) => React
 
 Input.defaultProps = {
   as: "input",
-  size: "md",
   skin: "white",
 };
 

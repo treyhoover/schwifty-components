@@ -9,7 +9,6 @@ class App extends React.Component {
       <ThemeProvider theme={theme}>
         <Page bodyClass="bg-light-gray ph4 pt2 pb5 sans-serif">
           <Text as="h1" f1>Schwifty Components</Text>
-          <Text as="p">All skins and sizes are completely themeable!</Text>
 
           <Text as="h2">Groups</Text>
           <Group pa4 mb2 ghost skin="black">
@@ -58,10 +57,14 @@ class App extends React.Component {
           </Group>
 
           <Text as="h2">Buttons</Text>
-          <Group mv2 flex items-end>
-            <Button size="sm" mr2-ns>Small</Button>
-            <Button size="md" mr2-ns>Medium</Button>
-            <Button size="lg">Large</Button>
+          <Group mv2 flex items-end flex-wrap>
+            <Button f7 mb2 mr2>Extra Extra Small</Button>
+            <Button f6 mb2 mr2>Extra Small</Button>
+            <Button f5 mb2 mr2>Small</Button>
+            <Button f4 mb2 mr2>Medium (default)</Button>
+            <Button f3 mb2 mr2>Large</Button>
+            <Button f2 mb2 mr2>Extra Large</Button>
+            <Button f1 mb2 mr2>Extra Extra Large</Button>
           </Group>
 
           <Group>
@@ -126,27 +129,31 @@ class App extends React.Component {
 
           <Text as="h3">Circular</Text>
           <Group mv2 flex items-end>
-            <Button skin="red" mb2 mr2-ns circular size="sm">★</Button>
-            <Button skin="green" mb2 mr2-ns circular size="md">★</Button>
-            <Button skin="blue" mb2 circular size="lg">★</Button>
+            <Button f7 skin="red" mb2 mr2-ns circular>★</Button>
+            <Button f5 skin="green" mb2 mr2-ns circular>★</Button>
+            <Button f4 skin="blue" mb2 circular>★</Button>
           </Group>
 
           <Text as="h2">Inputs</Text>
           <Group flex flex-wrap items-end>
-            <Input size="sm" mr2-ns mb2 placeholder="Small" />
-            <Input size="md" mr2-ns mb2 placeholder="Medium" />
-            <Input size="lg" mb2 placeholder="Large" />
+            <Input f7 mr2 mb2 placeholder="Extra extra Small" />
+            <Input f6 mr2 mb2 placeholder="Extra Small" />
+            <Input f5 mr2 mb2 placeholder="Small" />
+            <Input f4 mr2 mb2 placeholder="Medium" />
+            <Input f3 mr2 mb2 placeholder="Large" />
+            <Input f2 mr2 mb2 placeholder="Extra Large" />
+            <Input f1 mr2 mb2 placeholder="Extra Extra Large" />
           </Group>
 
           <Text as="h3">Input Skins</Text>
           <Group flex flex-wrap items-end>
-            <Input skin="gray" mr2-ns mb2 placeholder="Gray" />
-            <Input skin="red" mr2-ns mb2 placeholder="Red" />
-            <Input skin="orange" mr2-ns mb2 placeholder="Orange" />
-            <Input skin="yellow" mr2-ns mb2 placeholder="Yellow" />
-            <Input skin="green" mr2-ns mb2 placeholder="Green" />
-            <Input skin="blue" mr2-ns mb2 placeholder="Blue" />
-            <Input skin="black" mr2-ns mb2 placeholder="Black" />
+            <Input skin="gray" mr2 mb2 placeholder="Gray" />
+            <Input skin="red" mr2 mb2 placeholder="Red" />
+            <Input skin="orange" mr2 mb2 placeholder="Orange" />
+            <Input skin="yellow" mr2 mb2 placeholder="Yellow" />
+            <Input skin="green" mr2 mb2 placeholder="Green" />
+            <Input skin="blue" mr2 mb2 placeholder="Blue" />
+            <Input skin="black" mr2 mb2 placeholder="Black" />
           </Group>
 
           <Text as="h2">Cards</Text>

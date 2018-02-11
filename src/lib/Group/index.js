@@ -7,10 +7,10 @@ import 'tachyons/css/tachyons.min.css';
 
 const color = createColorizer("Group");
 
-const Group = styled(({ as, children, skin, size, ghost, inverted, ...props }) => React
+const Group = styled(({ as, children, skin, ghost, inverted, ...props }) => React
   .createElement(as, props, children))
   .attrs({
-    className: ({ skin, size, theme, ghost, inverted, ...props }) => classNames(
+    className: ({ skin, theme, ghost, inverted, ...props }) => classNames(
       { ba: !!skin && ghost }
     ),
   })`
@@ -26,7 +26,6 @@ Group.defaultProps = {
   inverted: false,
   ghost: false,
   skin: "",
-  size: "",
 };
 
 export default withTachyons(Group);
