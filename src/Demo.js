@@ -75,6 +75,7 @@ class App extends React.Component {
               no-underline
               dib
               mb2
+              mr2
             >
               Link
             </Button>
@@ -82,6 +83,20 @@ class App extends React.Component {
             <Button db w-100 skin="red">
               Block
             </Button>
+          </Group>
+
+          <Text as="h3">Disabled</Text>
+          <Group>
+            <Button mr2 disabled>Disabled</Button>
+            <Button f4 mr2 skin="blue" disabled>Disabled</Button>
+            <Button f3 skin="red" disabled>Disabled</Button>
+          </Group>
+
+          <Text as="h3">Loading</Text>
+          <Group>
+            <Button mr2 loading>Loading</Button>
+            <Button f4 mr2 skin="blue" loading>Loading</Button>
+            <Button f3 skin="red" loading>Loading</Button>
           </Group>
 
           <Text as="h3">With Skins</Text>
