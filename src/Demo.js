@@ -10,6 +10,28 @@ class App extends React.Component {
         <Page bodyClass="bg-light-gray" ph4 pv2 sans-serif>
           <Text as="h1" f1>Schwifty Components!</Text>
 
+          <Text as="h2">Skins</Text>
+
+          <Text as="p">All skins and sizes are completely themeable</Text>
+
+          <Text as="h3">Normal</Text>
+          <Group dib mr2 pa4 skin="gray">Gray</Group>
+          <Group dib mr2 pa4 skin="red">Red</Group>
+          <Group dib mr2 pa4 skin="orange">Orange</Group>
+          <Group dib mr2 pa4 skin="yellow">Yellow</Group>
+          <Group dib mr2 pa4 skin="green">Green</Group>
+          <Group dib mr2 pa4 skin="blue">Blue</Group>
+          <Group dib pa4 skin="black">Black</Group>
+
+          <Text as="h3">Inverted Skins</Text>
+          <Group inverted dib mr2 pa4 skin="gray">Gray</Group>
+          <Group inverted dib mr2 pa4 skin="red">Red</Group>
+          <Group inverted dib mr2 pa4 skin="orange">Orange</Group>
+          <Group inverted dib mr2 pa4 skin="yellow">Yellow</Group>
+          <Group inverted dib mr2 pa4 skin="green">Green</Group>
+          <Group inverted dib mr2 pa4 skin="blue">Blue</Group>
+          <Group inverted dib pa4 skin="black">Black</Group>
+
           <Text as="h2">Buttons</Text>
           <Group mv2 flex items-end>
             <Button size="sm" mr2-ns>Small</Button>
@@ -67,14 +89,14 @@ class App extends React.Component {
           </Group>
 
           <Text as="h3">Inverted Ghost</Text>
-          <Group mv2 flex items-end>
-            <Button inverted ghost skin="gray" mr2-ns>Default</Button>
-            <Button inverted ghost skin="red" mr2-ns>Red</Button>
-            <Button inverted ghost skin="orange" mr2-ns>Orange</Button>
-            <Button inverted ghost skin="yellow" mr2-ns>Yellow</Button>
-            <Button inverted ghost skin="green" mr2-ns>Green</Button>
-            <Button inverted ghost skin="blue" mr2-ns>Blue</Button>
-            <Button inverted ghost skin="black" mr2-ns>Black</Button>
+          <Group flex flex-wrap items-end pa4 skin="black" br4>
+            <Button inverted ghost skin="gray" mr2 mb2>Default</Button>
+            <Button inverted ghost skin="red" mr2 mb2>Red</Button>
+            <Button inverted ghost skin="orange" mr2 mb2>Orange</Button>
+            <Button inverted ghost skin="yellow" mr2 mb2>Yellow</Button>
+            <Button inverted ghost skin="green" mr2 mb2>Green</Button>
+            <Button inverted ghost skin="blue" mr2 mb2>Blue</Button>
+            <Button inverted ghost skin="black" mb2>Black</Button>
           </Group>
 
           <Text as="h3">Circular</Text>
