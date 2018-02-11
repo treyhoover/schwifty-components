@@ -8,7 +8,7 @@ const color = n => ({ theme, skin, inverted }) => inverted ?
   theme.Button.skins[skin][9 - n] :
   theme.Button.skins[skin][n];
 
-const Button = styled(({ as, children, skin, size, inverted, circular, ...props }) => React
+const Button = styled(({ as, children, skin, size, inverted, circular, ghost, ...props }) => React
   .createElement(as, props, children))
   .attrs({
     className: ({ skin, size, theme, circular, ...props }) => classNames(
@@ -16,7 +16,7 @@ const Button = styled(({ as, children, skin, size, inverted, circular, ...props 
       'pointer',
       'nowrap',
       'tc',
-      'bn',
+      'ba',
       'bg-animate',
       theme.Button.sizes[size],
     ),
@@ -26,19 +26,29 @@ const Button = styled(({ as, children, skin, size, inverted, circular, ...props 
       height: 4em;
     ` : ''}  
   
-    background-color: ${color(7)};
-    color: ${color(0)};
+    background-color: ${p => p.ghost ? "transparent" : color(7)(p)};
+    color: ${p => p.ghost ? color(7)(p) : color(0)(p)};
+    border-color: ${p => p.ghost ? color(7)(p) : "transparent"};
     
     &:hover {
-      background-color: ${color(8)};      
+      background-color: ${color(8)};
+      ${p => p.ghost ? `
+        color: ${color(0)(p)}
+      ` : ''}      
     }
     
     &:focus {
       background-color: ${color(8)};
+      ${p => p.ghost ? `
+        color: ${color(0)(p)}
+      ` : ''}
     }
     
     &:active {
       background-color: ${color(8)};
+      ${p => p.ghost ? `
+        color: ${color(0)(p)}
+      ` : ''}
     }
   `;
 
@@ -48,6 +58,7 @@ Button.defaultProps = {
   size: "md",
   inverted: false,
   circular: false,
+  ghost: false,
 };
 
 export default withTachyons(Button);

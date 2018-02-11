@@ -55,6 +55,28 @@ class App extends React.Component {
             <Button inverted skin="black" mr2-ns>Black</Button>
           </Group>
 
+          <Text as="h3">Ghost</Text>
+          <Group mv2 flex items-end>
+            <Button ghost skin="gray" mr2-ns>Default</Button>
+            <Button ghost skin="red" mr2-ns>Red</Button>
+            <Button ghost skin="orange" mr2-ns>Orange</Button>
+            <Button ghost skin="yellow" mr2-ns>Yellow</Button>
+            <Button ghost skin="green" mr2-ns>Green</Button>
+            <Button ghost skin="blue" mr2-ns>Blue</Button>
+            <Button ghost skin="black" mr2-ns>Black</Button>
+          </Group>
+
+          <Text as="h3">Inverted Ghost</Text>
+          <Group mv2 flex items-end>
+            <Button inverted ghost skin="gray" mr2-ns>Default</Button>
+            <Button inverted ghost skin="red" mr2-ns>Red</Button>
+            <Button inverted ghost skin="orange" mr2-ns>Orange</Button>
+            <Button inverted ghost skin="yellow" mr2-ns>Yellow</Button>
+            <Button inverted ghost skin="green" mr2-ns>Green</Button>
+            <Button inverted ghost skin="blue" mr2-ns>Blue</Button>
+            <Button inverted ghost skin="black" mr2-ns>Black</Button>
+          </Group>
+
           <Text as="h3">Circular</Text>
           <Group mv2 flex items-end>
             <Button skin="red" mb2 mr2-ns circular size="sm">★</Button>
