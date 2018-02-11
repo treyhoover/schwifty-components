@@ -44,14 +44,22 @@ class App extends React.Component {
             <Button skin="black" mr2-ns>Black</Button>
           </Group>
 
+          <Text as="h3">Inverted</Text>
           <Group mv2 flex items-end>
-            <Button inverted skin="gray" mr2-ns>Inverted Default</Button>
-            <Button inverted skin="red" mr2-ns>Inverted Red</Button>
-            <Button inverted skin="orange" mr2-ns>Inverted Orange</Button>
-            <Button inverted skin="yellow" mr2-ns>Inverted Yellow</Button>
-            <Button inverted skin="green" mr2-ns>Inverted Green</Button>
-            <Button inverted skin="blue" mr2-ns>Inverted Blue</Button>
-            <Button inverted skin="black" mr2-ns>Inverted Black</Button>
+            <Button inverted skin="gray" mr2-ns>Default</Button>
+            <Button inverted skin="red" mr2-ns>Red</Button>
+            <Button inverted skin="orange" mr2-ns>Orange</Button>
+            <Button inverted skin="yellow" mr2-ns>Yellow</Button>
+            <Button inverted skin="green" mr2-ns>Green</Button>
+            <Button inverted skin="blue" mr2-ns>Blue</Button>
+            <Button inverted skin="black" mr2-ns>Black</Button>
+          </Group>
+
+          <Text as="h3">Circular</Text>
+          <Group mv2 flex items-end>
+            <Button skin="red" mb2 mr2-ns circular size="sm">★</Button>
+            <Button skin="green" mb2 mr2-ns circular size="md">★</Button>
+            <Button skin="blue" mb2 circular size="lg">★</Button>
           </Group>
 
           <Text as="h2">Inputs</Text>
