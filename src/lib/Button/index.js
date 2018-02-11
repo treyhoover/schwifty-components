@@ -2,11 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import withTachyons from "../../hoc/withTachyons";
+import { createColorizer } from "../../utils/color";
 import 'tachyons/css/tachyons.min.css';
 
-const color = n => ({ theme, skin, inverted }) => inverted ?
-  theme.Button.skins[skin][9 - n] :
-  theme.Button.skins[skin][n];
+const color = createColorizer("Button");
 
 const Button = styled(({ as, children, skin, size, inverted, circular, ghost, ...props }) => React
   .createElement(as, props, children))
