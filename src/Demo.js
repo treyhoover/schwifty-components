@@ -8,29 +8,54 @@ class App extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <Page bodyClass="bg-light-gray ph4 pt2 pb5 sans-serif">
-          <Text as="h1" f1>Schwifty Components!</Text>
+          <Text as="h1" f1>Schwifty Components</Text>
+          <Text as="p">All skins and sizes are completely themeable!</Text>
 
-          <Text as="h2">Skins</Text>
+          <Text as="h2">Groups</Text>
+          <Group pa4 mb2 ghost skin="black">
+            <Text as="p">Groups are just generic, styleable components - often used for grouping
+              components.</Text>
 
-          <Text as="p">All skins and sizes are completely themeable</Text>
+            <Text as="p">By default, they are simply unstyled divs.</Text>
+          </Group>
 
-          <Text as="h3">Normal</Text>
-          <Group dib mr2 pa4 skin="gray">Gray</Group>
-          <Group dib mr2 pa4 skin="red">Red</Group>
-          <Group dib mr2 pa4 skin="orange">Orange</Group>
-          <Group dib mr2 pa4 skin="yellow">Yellow</Group>
-          <Group dib mr2 pa4 skin="green">Green</Group>
-          <Group dib mr2 pa4 skin="blue">Blue</Group>
-          <Group dib pa4 skin="black">Black</Group>
+          <Text as="h3">Group Skins</Text>
+          <Group skin="gray" mb2 pa3 tc>Gray</Group>
+          <Group skin="red" mb2 pa3 tc>Red</Group>
+          <Group skin="orange" mb2 pa3 tc>Orange</Group>
+          <Group skin="yellow" mb2 pa3 tc>Yellow</Group>
+          <Group skin="green" mb2 pa3 tc>Green</Group>
+          <Group skin="blue" mb2 pa3 tc>Blue</Group>
+          <Group skin="black" mb2 pa3 tc>Black</Group>
 
-          <Text as="h3">Inverted Skins</Text>
-          <Group inverted dib mr2 pa4 skin="gray">Gray</Group>
-          <Group inverted dib mr2 pa4 skin="red">Red</Group>
-          <Group inverted dib mr2 pa4 skin="orange">Orange</Group>
-          <Group inverted dib mr2 pa4 skin="yellow">Yellow</Group>
-          <Group inverted dib mr2 pa4 skin="green">Green</Group>
-          <Group inverted dib mr2 pa4 skin="blue">Blue</Group>
-          <Group inverted dib pa4 skin="black">Black</Group>
+          <Text as="h3">Inverted Group Skins</Text>
+          <Group inverted skin="gray" mb2 pa3 tc>Inverted Gray</Group>
+          <Group inverted skin="red" mb2 pa3 tc>Inverted Red</Group>
+          <Group inverted skin="orange" mb2 pa3 tc>Inverted Orange</Group>
+          <Group inverted skin="yellow" mb2 pa3 tc>Inverted Yellow</Group>
+          <Group inverted skin="green" mb2 pa3 tc>Inverted Green</Group>
+          <Group inverted skin="blue" mb2 pa3 tc>Inverted Blue</Group>
+          <Group inverted skin="black" mb2 pa3 tc>Inverted Black</Group>
+
+          <Text as="h3">Ghost Group Skins</Text>
+          <Group ghost skin="gray" mb2 pa3 tc>Ghost Gray</Group>
+          <Group ghost skin="red" mb2 pa3 tc>Ghost Red</Group>
+          <Group ghost skin="orange" mb2 pa3 tc>Ghost Orange</Group>
+          <Group ghost skin="yellow" mb2 pa3 tc>Ghost Yellow</Group>
+          <Group ghost skin="green" mb2 pa3 tc>Ghost Green</Group>
+          <Group ghost skin="blue" mb2 pa3 tc>Ghost Blue</Group>
+          <Group ghost skin="black" mb2 pa3 tc>Ghost Black</Group>
+
+          <Text as="h3">Inverted Ghost Group Skins</Text>
+          <Group pa4 br2 skin="black">
+            <Group inverted ghost skin="gray" mb2 pa3 tc>Inverted Ghost Gray</Group>
+            <Group inverted ghost skin="red" mb2 pa3 tc>Inverted Ghost Red</Group>
+            <Group inverted ghost skin="orange" mb2 pa3 tc>Inverted Ghost Orange</Group>
+            <Group inverted ghost skin="yellow" mb2 pa3 tc>Inverted Ghost Yellow</Group>
+            <Group inverted ghost skin="green" mb2 pa3 tc>Inverted Ghost Green</Group>
+            <Group inverted ghost skin="blue" mb2 pa3 tc>Inverted Ghost Blue</Group>
+            <Group inverted ghost skin="black" pa3 tc>Inverted Ghost Black</Group>
+          </Group>
 
           <Text as="h2">Buttons</Text>
           <Group mv2 flex items-end>
@@ -89,7 +114,7 @@ class App extends React.Component {
           </Group>
 
           <Text as="h3">Inverted Ghost</Text>
-          <Group flex flex-wrap items-end pa4 skin="black" br4>
+          <Group flex flex-wrap items-end pa4 skin="black" br2>
             <Button inverted ghost skin="gray" mr2 mb2>Default</Button>
             <Button inverted ghost skin="red" mr2 mb2>Red</Button>
             <Button inverted ghost skin="orange" mr2 mb2>Orange</Button>
@@ -113,6 +138,7 @@ class App extends React.Component {
             <Input size="lg" mb2 placeholder="Large" />
           </Group>
 
+          <Text as="h3">Input Skins</Text>
           <Group flex flex-wrap items-end>
             <Input skin="gray" mr2-ns mb2 placeholder="Gray" />
             <Input skin="red" mr2-ns mb2 placeholder="Red" />
