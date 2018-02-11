@@ -205,6 +205,17 @@ class App extends React.Component {
             <Input inverted ghost skin="black" mr2 mb2 placeholder="Black" />
           </Group>
 
+          <Text as="h3">Input Groups</Text>
+          <Group flex w5 mb2>
+            <Input flex-auto br--left ghost placeholder="Search" />
+            <Button br--right skin="blue">Go</Button>
+          </Group>
+
+          <Group flex w5 mb2>
+            <Group ph3 pv2 br2 br--left skin="gray">$</Group>
+            <Input flex-auto br--right ghost defaultValue="1.00" />
+          </Group>
+
           <Text as="h2">Cards</Text>
 
           <Group flex flex-wrap>
