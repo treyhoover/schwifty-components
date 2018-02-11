@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { Text, Image, Button, Input, Card, Group, Page } from "./lib";
+import { Text, Image, Button, Input, Card, Group, Page, List } from "./lib";
 import * as theme from "./theme";
 
 class App extends React.Component {
@@ -203,6 +203,22 @@ class App extends React.Component {
               <Text db b f3 mb2>Cards!</Text>
             </Card>
           </Group>
+
+          <Text as="h2">Lists</Text>
+          <List pa0>
+            <List.Item>This</List.Item>
+            <List.Item>is</List.Item>
+            <List.Item>a</List.Item>
+            <List.Item>list</List.Item>
+          </List>
+
+          <Text as="h3">Horizontal Lists</Text>
+          <List pa0>
+            <List.Item dib mr1>This</List.Item>
+            <List.Item dib mr1>is</List.Item>
+            <List.Item dib mr1>a</List.Item>
+            <List.Item dib mr1>list</List.Item>
+          </List>
 
         </Page>
       </ThemeProvider>
