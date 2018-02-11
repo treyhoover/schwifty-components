@@ -84,18 +84,19 @@ class App extends React.Component {
             </Button>
           </Group>
 
-          <Group mv2 flex items-end>
-            <Button skin="gray" mr2-ns>Default</Button>
-            <Button skin="red" mr2-ns>Red</Button>
-            <Button skin="orange" mr2-ns>Orange</Button>
-            <Button skin="yellow" mr2-ns>Yellow</Button>
-            <Button skin="green" mr2-ns>Green</Button>
-            <Button skin="blue" mr2-ns>Blue</Button>
-            <Button skin="black" mr2-ns>Black</Button>
+          <Text as="h3">With Skins</Text>
+          <Group mv2>
+            <Button skin="gray" mr2 mb2>Default</Button>
+            <Button skin="red" mr2 mb2>Red</Button>
+            <Button skin="orange" mr2 mb2>Orange</Button>
+            <Button skin="yellow" mr2 mb2>Yellow</Button>
+            <Button skin="green" mr2 mb2>Green</Button>
+            <Button skin="blue" mr2 mb2>Blue</Button>
+            <Button skin="black" mb2>Black</Button>
           </Group>
 
           <Text as="h3">Inverted</Text>
-          <Group mv2 flex items-end>
+          <Group mv2>
             <Button inverted skin="gray" mr2-ns>Default</Button>
             <Button inverted skin="red" mr2-ns>Red</Button>
             <Button inverted skin="orange" mr2-ns>Orange</Button>
@@ -106,7 +107,7 @@ class App extends React.Component {
           </Group>
 
           <Text as="h3">Ghost</Text>
-          <Group mv2 flex items-end>
+          <Group mv2 flex flex-wrap items-end>
             <Button ghost skin="gray" mr2-ns>Default</Button>
             <Button ghost skin="red" mr2-ns>Red</Button>
             <Button ghost skin="orange" mr2-ns>Orange</Button>
@@ -128,7 +129,7 @@ class App extends React.Component {
           </Group>
 
           <Text as="h3">Circular</Text>
-          <Group mv2 flex items-end>
+          <Group mv2 flex flex-wrap items-end>
             <Button f7 skin="red" mb2 mr2-ns circular>★</Button>
             <Button f5 skin="green" mb2 mr2-ns circular>★</Button>
             <Button f4 skin="blue" mb2 circular>★</Button>
@@ -158,7 +159,7 @@ class App extends React.Component {
 
           <Text as="h2">Cards</Text>
 
-          <Group flex>
+          <Group flex flex-wrap>
             <Card pa3 mr4>
               <Image db br-100 w-100 mb3 src="http://via.placeholder.com/150x150" />
               <Text db b f3>Cards!</Text>
