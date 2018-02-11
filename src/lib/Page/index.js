@@ -15,11 +15,19 @@ class Page extends React.Component {
   }
 
   componentWillUnmount() {
-    document.body.classList.remove(this.props.bodyClass);
+    const classes = this.props.bodyClass.split(" ");
+
+    classes.forEach(c => {
+      document.body.classList.remove(c);
+    });
   }
 
   setBodyClass(bodyClass) {
-    document.body.classList.add(bodyClass);
+    const classes = bodyClass.split(" ");
+
+    classes.forEach(c => {
+      document.body.classList.add(c);
+    });
   }
 
   render() {
