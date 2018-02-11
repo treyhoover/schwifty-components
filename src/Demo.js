@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { Text, Image, Button, Input, Card, Group, Page, List } from "./lib";
+import { Text, Image, Button, Input, Card, Group, Page, List, ArrowBox } from "./lib";
 import * as theme from "./theme";
 
 class App extends React.Component {
@@ -275,6 +275,36 @@ class App extends React.Component {
             <List.Item dib mr1>a</List.Item>
             <List.Item dib mr1>list</List.Item>
           </List>
+
+          <Text as="h2">ArrowBoxes</Text>
+          <Group>
+            <ArrowBox f7 mr2 mb2>Hello!</ArrowBox>
+            <ArrowBox f7 skin="red" position="left" mr2 mb2>Hello!</ArrowBox>
+            <ArrowBox f5 skin="orange" position="top" mr2 mb2>Hello!</ArrowBox>
+            <ArrowBox f4 skin="yellow" position="right" mr2 mb2>Hello!</ArrowBox>
+            <ArrowBox f3 skin="green" position="bottom" mr2 mb2>Hello!</ArrowBox>
+            <ArrowBox f2 skin="blue" position="left" mr2 mb2>Hello!</ArrowBox>
+            <ArrowBox f1 skin="black" position="top" mr2 mb2>Hello!</ArrowBox>
+          </Group>
+
+          <Text as="h3">Inverted ArrowBoxes</Text>
+          <Group>
+            <ArrowBox inverted f7 mr2 mb2>Hello!</ArrowBox>
+            <ArrowBox inverted f7 skin="red" position="left" mr2 mb2>Hello!</ArrowBox>
+            <ArrowBox inverted f5 skin="orange" position="top" mr2 mb2>Hello!</ArrowBox>
+            <ArrowBox inverted f4 skin="yellow" position="right" mr2 mb2>Hello!</ArrowBox>
+            <ArrowBox inverted f3 skin="green" position="bottom" mr2 mb2>Hello!</ArrowBox>
+            <ArrowBox inverted f2 skin="blue" position="left" mr2 mb2>Hello!</ArrowBox>
+            <ArrowBox inverted f1 skin="black" position="top" mr2 mb2>Hello!</ArrowBox>
+          </Group>
+
+          <Text as="h3">With Arrow Size Prop</Text>
+          <ArrowBox f7 arrowSize={24} skin="red" position="left" mr2 mb2>Hello!</ArrowBox>
+          <ArrowBox f1 arrowSize={6} skin="blue" position="bottom" mr2 mb2>Hello!</ArrowBox>
+
+          <Text as="h3">With Border Width Prop</Text>
+          <ArrowBox f7 borderWidth={0} skin="green" position="top" mr2 mb2>Hello!</ArrowBox>
+          <ArrowBox f2 borderWidth={6} skin="orange" position="right" mr2 mb2>Hello!</ArrowBox>
 
         </Page>
       </ThemeProvider>
