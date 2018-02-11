@@ -80,8 +80,27 @@ class App extends React.Component {
               Link
             </Button>
 
-            <Button db w-100 skin="red">
+            <Button db w-100 mb2 skin="red">
               Block
+            </Button>
+
+            <Button w5 ghost>
+              Fixed width
+            </Button>
+          </Group>
+
+          <Text as="h3">Everything's responsive</Text>
+          <Group>
+            <Button mr2-ns mb2 w-100 db w-auto-ns dib-ns skin="red">
+              Watch
+            </Button>
+
+            <Button mr2-ns mb2 w-100 db w-auto-ns dib-ns skin="green">
+              Us
+            </Button>
+
+            <Button mr2-ns mb2 w-100 db w-auto-ns dib-ns skin="blue">
+              Stack
             </Button>
           </Group>
 
