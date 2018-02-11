@@ -3,15 +3,21 @@ import styled from "styled-components";
 import classNames from "classnames";
 import withTachyons from "../../hoc/withTachyons";
 import { createColorizer } from "../../utils/color";
+import LoadingIcon from "react-icons/lib/fa/circle-o-notch";
 import 'tachyons/css/tachyons.min.css';
 
 const color = createColorizer("Group");
 
-const Group = styled(({ as, children, skin, ghost, inverted, ...props }) => React
-  .createElement(as, props, children))
+const Group = styled(({ as: T, children, skin, ghost, inverted, loading, relative, ...props }) => (
+    <T {...props}>
+      {loading && <LoadingIcon className="absolute spin" />}
+      {loading ? <div className="o-0">{children}</div> : children}
+    </T>
+  ))
   .attrs({
-    className: ({ skin, theme, ghost, inverted, ...props }) => classNames(
-      { ba: !!skin && ghost }
+    className: ({ skin, theme, ghost, inverted, loading, ...props }) => classNames(
+      { ba: !!skin && ghost },
+      { 'o-60 flex items-center justify-center': loading },
     ),
   })`
     ${p => !!p.skin ? `
@@ -23,7 +29,9 @@ const Group = styled(({ as, children, skin, ghost, inverted, ...props }) => Reac
 
 Group.defaultProps = {
   as: "div",
+  loading: false,
   inverted: false,
+  relative: true,
   ghost: false,
   skin: "",
 };

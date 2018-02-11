@@ -12,8 +12,9 @@ class App extends React.Component {
 
           <Text as="h2">Groups</Text>
           <Group pa4 mb2 ghost skin="black">
-            <Text as="p">Groups are just generic, styleable components - often used for grouping
-              components.</Text>
+            <Text as="p">
+              Groups are just generic, styleable components - often used for, well, grouping things.
+            </Text>
 
             <Text as="p">By default, they are simply unstyled divs.</Text>
           </Group>
@@ -55,6 +56,16 @@ class App extends React.Component {
             <Group inverted ghost skin="blue" mb2 pa3 tc>Inverted Ghost Blue</Group>
             <Group inverted ghost skin="black" pa3 tc>Inverted Ghost Black</Group>
           </Group>
+
+          <Text as="h3">Loading Groups</Text>
+          <Group loading f3 skin="gray" mb2 pa3 tc>Gray</Group>
+          <Group loading f3 inverted skin="gray" mb2 pa3 tc>Gray</Group>
+          <Group loading f3 skin="red" mb2 pa3 tc>Red</Group>
+          <Group loading f3 skin="orange" mb2 pa3 tc>Orange</Group>
+          <Group loading f3 skin="yellow" mb2 pa3 tc>Yellow</Group>
+          <Group loading f3 skin="green" mb2 pa3 tc>Green</Group>
+          <Group loading f3 skin="blue" mb2 pa3 tc>Blue</Group>
+          <Group loading f3 skin="black" mb2 pa3 tc>Black</Group>
 
           <Text as="h2">Buttons</Text>
           <Group mv2 flex items-end flex-wrap>
