@@ -157,6 +157,39 @@ class App extends React.Component {
             <Input skin="black" mr2 mb2 placeholder="Black" />
           </Group>
 
+          <Text as="h3">Inverted Inputs</Text>
+          <Group flex flex-wrap items-end>
+            <Input inverted skin="gray" mr2 mb2 placeholder="Gray" />
+            <Input inverted skin="red" mr2 mb2 placeholder="Red" />
+            <Input inverted skin="orange" mr2 mb2 placeholder="Orange" />
+            <Input inverted skin="yellow" mr2 mb2 placeholder="Yellow" />
+            <Input inverted skin="green" mr2 mb2 placeholder="Green" />
+            <Input inverted skin="blue" mr2 mb2 placeholder="Blue" />
+            <Input inverted skin="black" mr2 mb2 placeholder="Black" />
+          </Group>
+
+          <Text as="h3">Ghost Inputs</Text>
+          <Group flex flex-wrap items-end>
+            <Input ghost skin="gray" mr2 mb2 placeholder="Gray" />
+            <Input ghost skin="red" mr2 mb2 placeholder="Red" />
+            <Input ghost skin="orange" mr2 mb2 placeholder="Orange" />
+            <Input ghost skin="yellow" mr2 mb2 placeholder="Yellow" />
+            <Input ghost skin="green" mr2 mb2 placeholder="Green" />
+            <Input ghost skin="blue" mr2 mb2 placeholder="Blue" />
+            <Input ghost skin="black" mr2 mb2 placeholder="Black" />
+          </Group>
+
+          <Text as="h3">Inverted Ghost Inputs</Text>
+          <Group skin="black" pa4 br2 flex flex-wrap items-end>
+            <Input inverted ghost skin="gray" mr2 mb2 placeholder="Gray" />
+            <Input inverted ghost skin="red" mr2 mb2 placeholder="Red" />
+            <Input inverted ghost skin="orange" mr2 mb2 placeholder="Orange" />
+            <Input inverted ghost skin="yellow" mr2 mb2 placeholder="Yellow" />
+            <Input inverted ghost skin="green" mr2 mb2 placeholder="Green" />
+            <Input inverted ghost skin="blue" mr2 mb2 placeholder="Blue" />
+            <Input inverted ghost skin="black" mr2 mb2 placeholder="Black" />
+          </Group>
+
           <Text as="h2">Cards</Text>
 
           <Group flex flex-wrap>
