@@ -3,7 +3,6 @@ import styled from "styled-components";
 import classNames from "classnames";
 import withTachyons from "../../hoc/withTachyons";
 import { color } from "../../utils/color";
-import 'tachyons/css/tachyons.min.css';
 
 const Input = styled(({ as, children, skin, inverted, ghost, ...props }) => React
   .createElement(as, props, children))

@@ -4,7 +4,6 @@ import classNames from "classnames";
 import withTachyons from "../../hoc/withTachyons";
 import ListItem from "./ListItem";
 import { color } from "../../utils/color";
-import 'tachyons/css/tachyons.min.css';
 
 const List = styled(({ as, children, skin, ghost, inverted, ...props }) => React
   .createElement(as, props, children))

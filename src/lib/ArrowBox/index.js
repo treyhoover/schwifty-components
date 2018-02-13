@@ -4,7 +4,6 @@ import classNames from "classnames";
 import withTachyons from "../../hoc/withTachyons";
 import { color } from "../../utils/color";
 import Group from "../Group";
-import 'tachyons/css/tachyons.min.css';
 
 const margin = pos => {
   switch (pos) {
