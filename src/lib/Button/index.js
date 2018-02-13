@@ -3,10 +3,8 @@ import styled from "styled-components";
 import classNames from "classnames";
 import Loader from "react-icons/lib/fa/circle-o-notch";
 import withTachyons from "../../hoc/withTachyons";
-import { createColorizer } from "../../utils/color";
+import { color } from "../../utils/color";
 import 'tachyons/css/tachyons.min.css';
-
-const color = createColorizer("Button");
 
 const Button = styled(({ as, children, skin, inverted, circular, ghost, loading, disabled, ...props }) => React
   .createElement(as, {

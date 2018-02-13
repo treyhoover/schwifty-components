@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import withTachyons from "../../hoc/withTachyons";
-import { createColorizer } from "../../utils/color";
+import { color } from "../../utils/color";
 import 'tachyons/css/tachyons.min.css';
-
-const color = createColorizer("Input");
 
 const Input = styled(({ as, children, skin, inverted, ghost, ...props }) => React
   .createElement(as, props, children))

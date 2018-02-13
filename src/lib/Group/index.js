@@ -2,11 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import withTachyons from "../../hoc/withTachyons";
-import { createColorizer } from "../../utils/color";
+import { color } from "../../utils/color";
 import LoadingIcon from "react-icons/lib/fa/circle-o-notch";
 import 'tachyons/css/tachyons.min.css';
-
-const color = createColorizer("Group");
 
 const Group = styled(({ as: T, children, skin, ghost, inverted, loading, relative, ...props }) => (
     <T {...props}>

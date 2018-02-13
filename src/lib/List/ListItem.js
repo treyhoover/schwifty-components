@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import withTachyons from "../../hoc/withTachyons";
-import { createColorizer } from "../../utils/color";
+import { color } from "../../utils/color";
 import 'tachyons/css/tachyons.min.css';
-
-const color = createColorizer("ListItem");
 
 const ListItem = styled(({ as, children, skin, ghost, inverted, ...props }) => React
   .createElement(as, props, children))

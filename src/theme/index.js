@@ -1,3 +1,3 @@
-export { default as Button } from "./Button";
-export { default as Input } from "./Input";
-export { default as Group } from "./Group";
+import * as allSkins from "./skins";
+
+export const skins = allSkins;
