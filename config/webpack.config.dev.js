@@ -1,6 +1,6 @@
 'use strict';
 
-const autoprefixer = require('autoprefixer');
+const theme = require('../src/theme');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -173,8 +173,9 @@ module.exports = {
                   // https://github.com/facebookincubator/create-react-app/issues/2677
                   ident: 'postcss',
                   plugins: () => [
+                    require('postcss-import'),
                     require('postcss-flexbugs-fixes'),
-                    autoprefixer({
+                    require('autoprefixer')({
                       browsers: [
                         '>1%',
                         'last 4 versions',
@@ -182,6 +183,12 @@ module.exports = {
                         'not ie < 9', // React doesn't support IE8 anyway
                       ],
                       flexbox: 'no-2009',
+                    }),
+                    require('postcss-custom-properties')({
+                      variables: theme,
+                    }),
+                    require("postcss-custom-media")({
+                      extensions: theme.breakpoints
                     }),
                   ],
                 },

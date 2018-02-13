@@ -1,4 +1,4 @@
-export const black = [
+const black = [
   "#ffffff",
   "#999999",
   "#8c8c8c",
@@ -11,7 +11,7 @@ export const black = [
   "#000000",
 ];
 
-export const gray = [
+const gray = [
   "#fafafa",
   "#f5f5f5",
   "#eeeeee",
@@ -24,7 +24,7 @@ export const gray = [
   "#383838",
 ];
 
-export const white = [
+const white = [
   "#ffffff",
   "#f2f2f2",
   "#e6e6e6",
@@ -37,7 +37,7 @@ export const white = [
   "#000000",
 ];
 
-export const red = [
+const red = [
   "#ffebee",
   "#ffcdd2",
   "#ef9a9a",
@@ -50,7 +50,7 @@ export const red = [
   "#b71c1c",
 ];
 
-export const orange = [
+const orange = [
   "#fff3e0",
   "#ffe0b2",
   "#ffcc80",
@@ -63,7 +63,7 @@ export const orange = [
   "#e65100",
 ];
 
-export const yellow = [
+const yellow = [
   "#fffde7",
   "#fff9c4",
   "#fff59d",
@@ -80,7 +80,7 @@ export const yellow = [
   "#ffd600",
 ];
 
-export const green = [
+const green = [
   '#e8f5e9',
   '#c8e6c9',
   '#a5d6a7',
@@ -93,7 +93,7 @@ export const green = [
   '#1b5e20',
 ];
 
-export const blue = [
+const blue = [
   '#e3f2fd',
   '#bbdefb',
   '#90caf9',
@@ -105,3 +105,14 @@ export const blue = [
   '#1565c0',
   '#0d47a1',
 ];
+
+module.exports = {
+  black,
+  gray,
+  white,
+  red,
+  orange,
+  yellow,
+  green,
+  blue,
+};

@@ -1,3 +1,31 @@
-import * as allSkins from "./skins";
+const borderRadius = require("./border-radius");
+const borderWidths = require("./border-widths");
+const boxShadow = require("./box-shadow");
+const breakpoints = require("./breakpoints");
+const fontFamily = require("./font-family");
+const heights = require("./heights");
+const letterSpacing = require("./letter-spacing");
+const lineHeight = require("./line-height");
+const maxWidths = require("./max-widths");
+const skins = require("./skins");
+const spacing = require("./spacing");
+const typeScale = require("./type-scale");
+const typography = require("./typography");
+const widths = require("./widths");
 
-export const skins = allSkins;
+module.exports = Object.assign({},
+  { skins },
+  { breakpoints },
+  borderRadius,
+  borderWidths,
+  boxShadow,
+  fontFamily,
+  heights,
+  letterSpacing,
+  lineHeight,
+  maxWidths,
+  spacing,
+  typeScale,
+  typography,
+  widths
+);

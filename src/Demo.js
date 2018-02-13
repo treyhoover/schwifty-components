@@ -7,7 +7,7 @@ class App extends React.Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Page bodyClass="bg-light-gray ph4 pt2 pb5 sans-serif">
+        <Page bodyClass="ph4 pt2 pb5 sans-serif">
           <Text as="h1" f1>Schwifty Components</Text>
 
           <Text as="h2">Groups</Text>
