@@ -37,26 +37,26 @@ const Button = styled(({ as, children, skin, inverted, circular, ghost, loading,
       height: 4em;
     ` : ''}  
   
-    background-color: ${p => p.ghost ? "transparent" : color(7)(p)};
-    color: ${p => p.ghost ? color(7)(p) : color(0)(p)};
-    border-color: ${p => p.ghost ? color(7)(p) : "transparent"};
+    background-color: ${p => p.ghost ? "transparent" : color(0.8)(p)};
+    color: ${p => p.ghost ? color(0.8)(p) : color(0)(p)};
+    border-color: ${p => p.ghost ? color(0.8)(p) : "transparent"};
     
     &:not([disabled]):hover {
-      background-color: ${color(8)};
+      background-color: ${color(0.9)};
       ${p => p.ghost ? `
         color: ${color(0)(p)}
       ` : ''}      
     }
     
     &:not([disabled]):focus {
-      background-color: ${color(8)};
+      background-color: ${color(0.9)};
       ${p => p.ghost ? `
         color: ${color(0)(p)}
       ` : ''}
     }
     
     &:not([disabled]):active {
-      background-color: ${color(8)};
+      background-color: ${color(0.9)};
       ${p => p.ghost ? `
         color: ${color(0)(p)}
       ` : ''}

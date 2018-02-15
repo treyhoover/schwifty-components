@@ -10,7 +10,7 @@ const Text = styled(({ as, children, skin, ...props }) => React
     // className: ({ skin, theme, ...props }) => classNames(),
   })`
     ${p => !!p.skin && `
-      color: ${color(7)(p)}    
+      color: ${color(0.8)(p)}    
     `}
   `;
 

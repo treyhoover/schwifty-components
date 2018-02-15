@@ -12,9 +12,9 @@ const ListItem = styled(({ as, children, skin, ghost, inverted, ...props }) => R
     ),
   })`
     ${p => !!p.skin ? `
-      background-color: ${p.ghost ? "transparent" : color(7)(p)};
-      color: ${p.ghost ? color(7)(p) : color(0)(p)};
-      border-color: ${p.ghost ? color(7)(p) : "transparent"};
+      background-color: ${p.ghost ? "transparent" : color(0.8)(p)};
+      color: ${p.ghost ? color(0.8)(p) : color(0)(p)};
+      border-color: ${p.ghost ? color(0.8)(p) : "transparent"};
     ` : ''}
   `;
 

@@ -49,8 +49,8 @@ const position = ({ position }) => {
 
 const capitalize = (str = "") => str[0].toUpperCase() + str.slice(1);
 
-const borderColor = color(9);
-const backgroundColor = color(7);
+const borderColor = color(1);
+const backgroundColor = color(0.8);
 const foregroundColor = color(0);
 
 const marginKey = position => `margin${capitalize(position)}`;

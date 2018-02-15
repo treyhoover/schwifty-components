@@ -13,9 +13,9 @@ const Input = styled(({ as, children, skin, inverted, ghost, ...props }) => Reac
     'ph2 pv1',
   ),
 })`
-  background-color: ${p => p.ghost ? "transparent" : color(2)(p)};
-  color: ${p => p.ghost ? color(7)(p) : color(9)(p)};
-  border-color: ${color(7)};
+  background-color: ${p => p.ghost ? "transparent" : color(0.1)(p)};
+  color: ${p => p.ghost ? color(0.8)(p) : color(1)(p)};
+  border-color: ${color(0.8)};
 
   &::placeholder {
     color: currentColor;

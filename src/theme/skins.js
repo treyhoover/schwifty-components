@@ -74,10 +74,6 @@ const yellow = [
   "#fbc02d",
   "#f9a825",
   "#f57f17",
-  "#ffff8d",
-  "#ffff00",
-  "#ffea00",
-  "#ffd600",
 ];
 
 const green = [
