@@ -7,15 +7,15 @@ const heights = require("./heights");
 const letterSpacing = require("./letter-spacing");
 const lineHeight = require("./line-height");
 const maxWidths = require("./max-widths");
-const skins = require("./skins");
+const colors = require("./colors");
 const spacing = require("./spacing");
 const typeScale = require("./type-scale");
 const typography = require("./typography");
 const widths = require("./widths");
 
 module.exports = Object.assign({},
-  { skins },
   { breakpoints },
+  colors,
   borderRadius,
   borderWidths,
   boxShadow,

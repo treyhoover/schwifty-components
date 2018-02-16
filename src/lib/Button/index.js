@@ -1,75 +1,51 @@
 import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
+import { withTachyons } from "reactyons";
 import Loader from "react-icons/lib/fa/circle-o-notch";
-import withTachyons from "../../hoc/withTachyons";
-import { color } from "../../utils/color";
 
-const Button = styled(({ as, children, skin, inverted, circular, ghost, loading, disabled, ...props }) => React
-  .createElement(as, {
-    ...props,
-    disabled: disabled || loading,
-  }, <React.Fragment>
-    {loading &&
-    <span
-      className="absolute"
-      style={{ left: "50%", transform: "translateX(-50%)" }}
-    >
-      <Loader className="spin" />
-    </span>}
-    <span className={loading ? "o-0" : "o-100"}>{children}</span>
-  </React.Fragment>))
+const Button = withTachyons(styled(
+  ({ as: T, children, circular, loading, bg, hoverBg, skin, ...props }) => (
+    <T {...props}>
+      {loading ? <Loader className="spin" /> : children}
+    </T>
+  ))
   .attrs({
-    className: ({ skin, theme, circular, disabled, loading, ...props }) => classNames(
-      circular ? 'pa2 truncate br-100' : 'ph3 pv2 br2',
-      { 'o-50': disabled || loading },
-      { 'pointer': !disabled && !loading },
-      { 'outline-0': disabled || loading },
+    className: (p) => classNames(
       'relative',
       'nowrap',
       'tc',
-      'ba',
       'bg-animate',
+      p.circular ? 'pa2 truncate br-100' : 'ph3 pv2 br2',
+      {
+        'o-50': p.disabled || p.loading,
+        'pointer': !p.disabled && !p.loading,
+        'outline-0': p.disabled || p.loading,
+      },
     ),
   })`
     ${({ circular }) => circular ? `
       width: 4em;
       height: 4em;
-    ` : ''}  
-  
-    background-color: ${p => p.ghost ? "transparent" : color(0.8)(p)};
-    color: ${p => p.ghost ? color(0.8)(p) : color(0)(p)};
-    border-color: ${p => p.ghost ? color(0.8)(p) : "transparent"};
+    ` : ''}
     
-    &:not([disabled]):hover {
-      background-color: ${color(0.9)};
-      ${p => p.ghost ? `
-        color: ${color(0)(p)}
-      ` : ''}      
-    }
-    
-    &:not([disabled]):focus {
-      background-color: ${color(0.9)};
-      ${p => p.ghost ? `
-        color: ${color(0)(p)}
-      ` : ''}
-    }
-    
-    &:not([disabled]):active {
-      background-color: ${color(0.9)};
-      ${p => p.ghost ? `
-        color: ${color(0)(p)}
-      ` : ''}
-    }
-  `;
+    ${({ disabled, loading }) => disabled || loading ? `
+      pointer-events: none;
+    ` : ''}
+  `);
 
 Button.defaultProps = {
   as: "button",
-  skin: "gray",
-  inverted: false,
   circular: false,
   loading: false,
-  ghost: false,
 };
 
-export default withTachyons(Button);
+/* Skins */
+Button.Default = p => <Button bn bg-gray white hover-bg-dark-gray {...p} />;
+Button.Primary = p => <Button bn bg-blue white hover-bg-dark-blue {...p} />;
+Button.Secondary = p => <Button bn bg-black white hover-bg-dark-gray {...p} />;
+Button.Default.Ghost = p => <Button ba b--gray bg-transparent gray hover-bg-gray hover-white {...p} />;
+Button.Primary.Ghost = p => <Button ba b--blue bg-transparent blue hover-bg-blue hover-white {...p} />;
+Button.Secondary.Ghost = p => <Button ba b--black bg-transparent black hover-bg-black hover-white {...p} />;
+
+export default Button;

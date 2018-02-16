@@ -2,21 +2,26 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import withTachyons from "../../hoc/withTachyons";
-import { color } from "../../utils/color";
+
+const skins = {
+  red: 'bg-red white',
+  orange: 'bg-orange white',
+  yellow: 'bg-yellow white',
+  green: 'bg-green white',
+  blue: 'bg-blue white',
+  black: 'bg-black white',
+  white: 'bg-white black',
+  gray: 'bg-gray white',
+};
 
 const ListItem = styled(({ as, children, skin, ghost, inverted, ...props }) => React
   .createElement(as, props, children))
   .attrs({
     className: ({ skin, theme, ghost, inverted, ...props }) => classNames(
-      { ba: !!skin && ghost }
+      { ba: !!skin && ghost },
+      skins[skin],
     ),
-  })`
-    ${p => !!p.skin ? `
-      background-color: ${p.ghost ? "transparent" : color(0.8)(p)};
-      color: ${p.ghost ? color(0.8)(p) : color(0)(p)};
-      border-color: ${p.ghost ? color(0.8)(p) : "transparent"};
-    ` : ''}
-  `;
+  })``;
 
 ListItem.defaultProps = {
   as: "li",

@@ -2,7 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import withTachyons from "../../hoc/withTachyons";
-import { color } from "../../utils/color";
+
+const skins = {
+  red: 'bg-red white',
+  orange: 'bg-orange white',
+  yellow: 'bg-yellow white',
+  green: 'bg-green white',
+  blue: 'bg-blue white',
+  black: 'bg-black white',
+  white: 'bg-white black',
+  gray: 'bg-gray white',
+};
 
 const Input = styled(({ as, children, skin, inverted, ghost, ...props }) => React
   .createElement(as, props, children))
@@ -11,12 +21,9 @@ const Input = styled(({ as, children, skin, inverted, ghost, ...props }) => Reac
     'input-reset',
     'ba br2',
     'ph2 pv1',
+    skins[skin],
   ),
 })`
-  background-color: ${p => p.ghost ? "transparent" : color(0.1)(p)};
-  color: ${p => p.ghost ? color(0.8)(p) : color(1)(p)};
-  border-color: ${color(0.8)};
-
   &::placeholder {
     color: currentColor;
     opacity: 0.5;

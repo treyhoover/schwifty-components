@@ -2,27 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import classNames from "classnames";
 import withTachyons from "../../hoc/withTachyons";
-import { color } from "../../utils/color";
 import LoadingIcon from "react-icons/lib/fa/circle-o-notch";
 
-const Group = styled(({ as: T, children, skin, ghost, inverted, loading, relative, ...props }) => (
-    <T {...props}>
-      {loading && <LoadingIcon className="absolute spin" />}
-      {loading ? <div className="o-0">{children}</div> : children}
-    </T>
-  ))
+const Group = withTachyons(styled(({ as: T, children, skin, ghost, inverted, loading, relative, ...props }) => (
+  <T {...props}>
+    {loading && <LoadingIcon className="absolute spin" />}
+    {loading ? <div className="o-0">{children}</div> : children}
+  </T>
+))
   .attrs({
-    className: ({ skin, theme, ghost, inverted, loading, ...props }) => classNames(
-      { ba: !!skin && ghost },
-      { 'o-60 flex items-center justify-center': loading },
+    className: (p) => classNames(
+      {
+        'o-60 flex items-center justify-center': p.loading,
+        'ba': p.ghost,
+      },
     ),
-  })`
-    ${p => !!p.skin ? `
-      background-color: ${p.ghost ? "transparent" : color(0.8)(p)};
-      color: ${p.ghost ? color(0.8)(p) : color(0)(p)};
-      border-color: ${p.ghost ? color(0.8)(p) : "transparent"};
-    ` : ''}
-  `;
+  })``);
 
 Group.defaultProps = {
   as: "div",
@@ -30,7 +25,14 @@ Group.defaultProps = {
   inverted: false,
   relative: true,
   ghost: false,
-  skin: "",
 };
 
-export default withTachyons(Group);
+/* Skins */
+Group.Default = p => <Group bn bg-light-gray black {...p} />;
+Group.Primary = p => <Group bn bg-light-blue black {...p} />;
+Group.Secondary = p => <Group bn bg-moon-gray black {...p} />;
+Group.Default.Ghost = p => <Group ba b--black bg-transparent black {...p} />;
+Group.Primary.Ghost = p => <Group ba b--blue bg-transparent blue {...p} />;
+Group.Secondary.Ghost = p => <Group ba b--gray bg-transparent gray {...p} />;
+
+export default Group;
